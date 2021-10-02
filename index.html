@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      font-family: -webkit-pictograph, cursive;
+    }
+
+    html {
+      padding: 25px;
+    }
+
+    ul,
+    #myUL {
+      list-style-type: none;
+    }
+
+    #myUL {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    .qt img {
+      border: 3px dotted #DDD;
+      width: 50%;
+      height: 400px;
+    }
+
+    .qt li {
+      font-size: 18px;
+      font-weight: 600;
+      background-color: #e0e0e0;
+      padding: 10px;
+      margin-top: 25px;
+      width: 50%;
+      display: inline-block;
+    }
+
+    .caret {
+      cursor: pointer;
+      -webkit-user-select: none;
+      /* Safari 3.1+ */
+      -moz-user-select: none;
+      /* Firefox 2+ */
+      -ms-user-select: none;
+      /* IE 10+ */
+      user-select: none;
+    }
+
+    .caret::before {
+      content: "\25B6";
+      color: black;
+      display: inline-block;
+      margin-right: 6px;
+    }
+
+    .caret-down::before {
+      -ms-transform: rotate(90deg);
+      /* IE 9 */
+      -webkit-transform: rotate(90deg);
+      /* Safari */
+      transform: rotate(90deg);
+    }
+
+    .nested {
+      display: none;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .red {
+      color: #e65100;
+      font-weight: 600;
+    }
+
+    .blue {
+      color: blue;
+      font-weight: 400;
+    }
+
+    .note {
+      background-color: #f5f5f5;
+      border-radius: 4px;
+      color: #333;
+      padding-left: 5px;
+      padding-right: 5px;
+      display: none;
+    }
+
+    .skill {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    .info:hover+.note {
+      display: inline-block;
+      color: #444;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>BSM Question</h2>
+  <p>A tree view represents a hierarchical view of questions, where each item can have a number of subitems.</p>
+  <p>Click on the arrow(s) to open or close the tree branches.</p>
+  <hr />
+  <ul id="myUL">
+    <li><span class="caret">Reception <span class="red">(grade)</span></span>
+      <ul class="nested">
+        <li><span class="caret">Count to 3 <span class="red">(sub grade)</span></span>
+          <ul class="nested">
+            <li><span class="caret">Learn to count - up to 3 <span class="red skill">(skill)</span>
+                <strong class="info">&#9432;</strong>
+                <span class="note"> Each skill has two fixed properties <span class="blue">(topic, question
+                    type)</span> so all questions under this skill must be based on these specifications.
+                </span>
+              </span>
+              <ul class="nested">
+                <li>1- Question 1</li>
+                <li>2- Question 2</li>
+                <li>3- Question 3</li>
+                <li>4- Question 4</li>
+                <li>5- Question 5</li>
+                <li>x- Question x</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <hr />
+    <li><span class="caret">Year 1 <span class="red">(grade)</span></span>
+      <ul class="nested">
+        <li><span class="caret">Numbers and counting up to 3 <span class="red">(sub grade)</span></span>
+          <ul class="nested">
+            <li><span class="caret">Count on ten frames - up to 3 <span class="red skill">(skill)</span>
+                <strong class="info"> &#9432;</strong>
+                <span class="note">Each skill has two fixed properties <span class="blue">(topic, question
+                    type)</span> so all questions under this skill must be based on these specifications.
+                </span>
+              </span>
+              <ul class="nested">
+                <li>1- Question 1</li>
+                <li>2- Question 2</li>
+                <li>3- Question 3</li>
+                <li>4- Question 4</li>
+                <li>5- Question 5</li>
+                <li>x- Question x</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <hr />
+
+  This could be reach to 12 years.
+
+  <h2>Skills form</h2>
+  <img src="imgs/skill.png" width="50%">
+  <h2>Skill topics</h2>
+  <p>This we use for categorization and clarification and does not entail any programming function</p>
+  <select class="form-control select2" name="topic_id" required>
+    <option value="">Select Topic</option>
+    <option value="30">Addition </option>
+    <option value="31">Algebra </option>
+    <option value="33">Counting </option>
+    <option value="34">Comparing </option>
+    <option value="35">Decimals </option>
+    <option value="36">Division </option>
+    <option value="37">Estimation </option>
+    <option value="38">Exponents, roots and logarithms </option>
+    <option value="39">Fractions </option>
+    <option value="40">Functions and equations </option>
+    <option value="41">Geometry </option>
+    <option value="42">Graphs </option>
+    <option value="43">Integers </option>
+    <option value="44">Measurement </option>
+    <option value="45">Mixed operations </option>
+    <option value="46">Money and consumer maths </option>
+    <option value="47">Multiplication </option>
+    <option value="48">Number theory </option>
+    <option value="49">Patterns </option>
+    <option value="50">Percents </option>
+    <option value="51">Place values </option>
+    <option value="52">Probability and statistics </option>
+    <option value="53">Properties </option>
+    <option value="54">Ratios and proportions </option>
+    <option value="55">Subtraction </option>
+    <option value="56">Time </option>
+    <option value="57">Trigonometry </option>
+    <option value="58">Word problems </option>
+  </select>
+
+  <h2>Question Types</h2>
+  <ul class="qt">
+    <li>1- select correct number answer</li>
+    <img src="imgs/p1.png">
+    <img src="imgs/pd1.png">
+    <li>2- select correct text answer</li>
+    <img src="imgs/p2.png">
+    <img src="imgs/pd2.png">
+    <li>3- select correct image</li>
+    <img src="imgs/p3.png">
+    <img src="imgs/pd3.png">
+    <li>4- Basic math (addition, multiplication, subtraction, division)</li>
+    <img src="imgs/p4.png">
+    <img src="imgs/pd4.png">
+    <li>5- pattern 4 (dynamic input)</li>
+    <img src="imgs/p5.png">
+    <img src="imgs/pd5.png">
+  </ul>
+
+  <script>
+    var toggler = document.getElementsByClassName("caret");
+    var i;
+
+    for (i = 0; i < toggler.length; i++) {
+      toggler[i].addEventListener("click", function () {
+        this.parentElement.querySelector(".nested").classList.toggle("active");
+        this.classList.toggle("caret-down");
+      });
+    }
+  </script>
+
+</body>
+
+</html>
