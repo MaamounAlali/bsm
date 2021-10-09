@@ -107,6 +107,12 @@
       display: inline-block;
       color: #444;
     }
+    @media only screen and (max-width: 600px) {
+      .qt img {
+        width: 90%;
+        height: 400px;
+      }
+    }
   </style>
 </head>
 
@@ -173,7 +179,7 @@
   This is applicable year 12.
 
   <h2>Skills form</h2>
-  <img src="imgs/skill.png" width="50%">
+  <img src="imgs/skill.png" width="90%">
   <h2>Skill topics</h2>
   <p>This we use for categorization and clarification and does not entail any programming function</p>
   <select class="form-control select2" name="topic_id" required>
